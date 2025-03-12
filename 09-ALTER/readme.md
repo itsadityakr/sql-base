@@ -1,6 +1,6 @@
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-# DDL `ALTER` Command: A Detailed Explanation
+# DDL `ALTER` Command
 
 The `ALTER` command is a **Data Definition Language (DDL)** statement used to modify the structure of an existing database object, such as a table. It allows you to add, modify, or drop columns, constraints, and other properties of a table without needing to recreate it. The `ALTER` command is essential for maintaining and evolving the database schema as requirements change.
 
@@ -41,6 +41,8 @@ ADD column_name datatype constraints;
 ALTER TABLE employees
 ADD email VARCHAR(100);
 ```
+![alt text](image.png)
+
 This adds a new column named `email` of type `VARCHAR(100)` to the `employees` table.
 
 ---
@@ -59,6 +61,8 @@ MODIFY column_name new_datatype constraints;
 ALTER TABLE employees
 MODIFY salary DECIMAL(12, 2);
 ```
+![alt text](image-1.png)
+
 This changes the `salary` column to allow up to 12 digits with 2 decimal places.
 
 ---
@@ -77,6 +81,8 @@ RENAME COLUMN old_name TO new_name;
 ALTER TABLE employees
 RENAME COLUMN email TO work_email;
 ```
+![alt text](image-2.png)
+
 This renames the `email` column to `work_email`.
 
 ---
@@ -95,6 +101,8 @@ DROP COLUMN column_name;
 ALTER TABLE employees
 DROP COLUMN work_email;
 ```
+![alt text](image-3.png)
+
 This removes the `work_email` column from the `employees` table.
 
 ---
@@ -149,6 +157,10 @@ RENAME TO new_table_name;
 ALTER TABLE employees
 RENAME TO staff;
 ```
+
+![alt text](image-4.png)
+![alt text](image-5.png)
+
 This renames the `employees` table to `staff`.
 
 ---
@@ -168,19 +180,7 @@ This adds a foreign key constraint on the `customer_id` column in the `orders` t
 
 ---
 
-### 2. **Changing Column Default Value**
-You can set or change the default value for a column.
-
-#### Example
-```sql
-ALTER TABLE employees
-ALTER COLUMN hire_date SET DEFAULT CURRENT_DATE;
-```
-This sets the default value of the `hire_date` column to the current date.
-
----
-
-### 3. **Dropping a Default Value**
+### 2. **Dropping a Default Value**
 You can remove the default value from a column.
 
 #### Example

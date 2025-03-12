@@ -24,30 +24,41 @@ LIMIT number;
 ```sql
 SELECT * FROM employees;
 ```
+![alt text](image.png)
+
 This query retrieves all columns from the `employees` table.
+
 
 #### 2. Retrieving Specific Columns
 ```sql
 SELECT first_name, last_name FROM employees;
 ```
+![alt text](image-1.png)
+
 This query retrieves only the `first_name` and `last_name` columns.
 
 #### 3. Filtering Data with `WHERE`
 ```sql
 SELECT * FROM employees WHERE department = 'Sales';
 ```
+![alt text](image-2.png)
+
 This query retrieves all employees in the Sales department.
 
 #### 4. Sorting Data with `ORDER BY`
 ```sql
 SELECT * FROM employees ORDER BY salary DESC;
 ```
+![alt text](image-3.png)
+
 This query retrieves all employees sorted by salary in descending order.
 
 #### 5. Limiting Results with `LIMIT`
 ```sql
-SELECT * FROM employees LIMIT 10;
+SELECT * FROM employees LIMIT 3;
 ```
+![alt text](image-4.png)
+
 This query retrieves the first 10 rows from the `employees` table.
 
 #### 6. Aggregating Data with `GROUP BY`
@@ -56,6 +67,8 @@ SELECT department, COUNT(*) AS employee_count
 FROM employees
 GROUP BY department;
 ```
+![alt text](image-5.png)
+
 This query retrieves the number of employees in each department.
 
 ---
@@ -77,12 +90,14 @@ CREATE TABLE table_name (
 #### 1. Creating a Table
 ```sql
 CREATE TABLE employees (
-    employee_id INT PRIMARY KEY,
+    employee_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
-    hire_date DATE,
+    department VARCHAR(50),
     salary DECIMAL(10, 2),
-    department VARCHAR(50)
+    hire_date DATE,
+    manager_id INT,
+    department_id INT
 );
 ```
 This query creates a table named `employees` with columns for employee details.
@@ -90,13 +105,12 @@ This query creates a table named `employees` with columns for employee details.
 #### 2. Creating a Table with Constraints
 ```sql
 CREATE TABLE departments (
-    department_id INT PRIMARY KEY,
-    department_name VARCHAR(50) UNIQUE,
-    manager_id INT,
-    FOREIGN KEY (manager_id) REFERENCES employees(employee_id)
+    department_id INT PRIMARY KEY AUTO_INCREMENT,
+    department_name VARCHAR(50) NOT NULL,
+    location VARCHAR(50)
 );
 ```
-This query creates a `departments` table with a foreign key constraint linking `manager_id` to the `employees` table.
+This query creates a `departments` table with a primary key constraint linking `department_id`.
 
 ---
 
@@ -113,16 +127,19 @@ VALUES (value1, value2, ...);
 
 #### 1. Inserting a Single Row
 ```sql
-INSERT INTO employees (employee_id, first_name, last_name, hire_date, salary, department)
-VALUES (101, 'John', 'Doe', '2023-10-25', 50000, 'Sales');
+INSERT INTO employees (first_name, last_name, department, salary, hire_date, manager_id, department_id)
+VALUES ('John', 'Doe', 'Sales', 50000, '2022-01-15', NULL, 1);
 ```
 This query adds a new employee to the `employees` table.
 
 #### 2. Inserting Multiple Rows
 ```sql
-INSERT INTO employees (employee_id, first_name, last_name, hire_date, salary, department)
-VALUES (102, 'Jane', 'Smith', '2023-09-15', 60000, 'HR'),
-       (103, 'Alice', 'Johnson', '2023-08-10', 70000, 'IT');
+INSERT INTO employees (first_name, last_name, department, salary, hire_date, manager_id, department_id)
+VALUES ('John', 'Doe', 'Sales', 50000, '2022-01-15', NULL, 1),
+       ('Jane', 'Smith', 'HR', 60000, '2021-05-20', NULL, 2),
+       ('Alice', 'Johnson', 'IT', 70000, '2023-03-10', NULL, 3),
+       ('Bob', 'Brown', 'Sales', 55000, '2022-11-01', 1, 1),
+       ('Charlie', 'Davis', 'Marketing', 65000, '2023-07-22', NULL, 4);
 ```
 This query adds two new employees to the `employees` table.
 
@@ -133,6 +150,8 @@ SELECT first_name, last_name, department
 FROM employees
 WHERE hire_date > '2023-01-01';
 ```
+![alt text](image-6.png)
+
 This query inserts data into `new_employees` from the `employees` table for employees hired after January 1, 2023.
 
 ---
@@ -153,8 +172,10 @@ WHERE condition;
 ```sql
 UPDATE employees
 SET salary = 55000
-WHERE employee_id = 101;
+WHERE employee_id = 3;
 ```
+![alt text](image-7.png)
+
 This query updates the salary of the employee with `employee_id = 101`.
 
 #### 2. Updating Multiple Rows
@@ -163,15 +184,9 @@ UPDATE employees
 SET salary = salary * 1.1
 WHERE department = 'Sales';
 ```
-This query gives a 10% salary raise to all employees in the Sales department.
+![alt text](image-8.png)
 
-#### 3. Updating with Subqueries
-```sql
-UPDATE employees
-SET salary = (SELECT AVG(salary) FROM employees)
-WHERE department = 'HR';
-```
-This query sets the salary of all HR employees to the average salary of all employees.
+This query gives a 10% salary raise to all employees in the Sales department.
 
 ---
 
@@ -189,29 +204,28 @@ WHERE condition;
 #### 1. Deleting a Single Row
 ```sql
 DELETE FROM employees
-WHERE employee_id = 101;
+WHERE employee_id = 2;
 ```
-This query deletes the employee with `employee_id = 101`.
+![alt text](image-9.png)
+
+This query deletes the employee with `employee_id = 2`.
 
 #### 2. Deleting Multiple Rows
 ```sql
 DELETE FROM employees
 WHERE department = 'IT';
 ```
+![alt text](image-10.png)
+
 This query deletes all employees in the IT department.
 
 #### 3. Deleting All Rows
 ```sql
 DELETE FROM employees;
 ```
-This query deletes all rows from the `employees` table (use with caution!).
+![alt text](image-11.png)
 
-#### 4. Deleting with Subqueries
-```sql
-DELETE FROM employees
-WHERE salary < (SELECT AVG(salary) FROM employees);
-```
-This query deletes all employees whose salary is below the average salary.
+This query deletes all rows from the `employees` table (use with caution!).
 
 ---
 

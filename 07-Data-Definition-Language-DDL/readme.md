@@ -30,12 +30,14 @@ CREATE TABLE table_name (
 ### Example
 ```sql
 CREATE TABLE employees (
-    employee_id INT PRIMARY KEY,
+    employee_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
-    hire_date DATE,
+    department VARCHAR(50),
     salary DECIMAL(10, 2),
-    department VARCHAR(50)
+    hire_date DATE,
+    manager_id INT,
+    department_id INT
 );
 ```
 This creates a table named `employees` with columns for employee details.
@@ -56,6 +58,8 @@ ADD column_name datatype constraints;
 ALTER TABLE employees
 ADD email VARCHAR(100);
 ```
+![alt text](image.png)
+
 This adds an `email` column to the `employees` table.
 
 ### Syntax for Modifying a Column
@@ -69,6 +73,8 @@ MODIFY column_name new_datatype constraints;
 ALTER TABLE employees
 MODIFY salary DECIMAL(12, 2);
 ```
+![alt text](image-1.png)
+
 This changes the `salary` column to allow up to 12 digits.
 
 ### Syntax for Dropping a Column
@@ -82,6 +88,8 @@ DROP COLUMN column_name;
 ALTER TABLE employees
 DROP COLUMN email;
 ```
+![alt text](image-2.png)
+
 This removes the `email` column from the `employees` table.
 
 ---
@@ -98,6 +106,8 @@ DROP TABLE table_name;
 ```sql
 DROP TABLE employees;
 ```
+![alt text](image-4.png)
+
 This deletes the `employees` table and all its data.
 
 ---
@@ -114,6 +124,8 @@ TRUNCATE TABLE table_name;
 ```sql
 TRUNCATE TABLE employees;
 ```
+![alt text](image-5.png)
+
 This removes all rows from the `employees` table but keeps the table structure intact.
 
 ---
@@ -135,32 +147,6 @@ This removes all rows from the `employees` table but keeps the table structure i
 2. **Irreversible Operations**: Commands like `DROP` and `TRUNCATE` are irreversible and should be used with caution.
 3. **Schema Management**: DDL is primarily used for defining and managing the database schema.
 4. **Data Impact**: While `CREATE` and `ALTER` do not directly affect data, `DROP` and `TRUNCATE` can result in data loss.
-
----
-
-## Examples in Action
-
-### Example 1: Creating and Modifying a Table
-```sql
-CREATE TABLE departments (
-    department_id INT PRIMARY KEY,
-    department_name VARCHAR(50) UNIQUE
-);
-
-ALTER TABLE departments
-ADD manager_id INT;
-```
-- Creates a `departments` table.
-- Adds a `manager_id` column to the table.
-
-### Example 2: Dropping and Truncating a Table
-```sql
-TRUNCATE TABLE departments;
-
-DROP TABLE departments;
-```
-- Removes all rows from the `departments` table.
-- Deletes the `departments` table entirely.
 
 ---
 
