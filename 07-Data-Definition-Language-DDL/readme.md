@@ -6,6 +6,12 @@
 
 ---
 
+## **Example Table**
+
+![alt text](../assets/image-2.png)
+
+---
+
 ## Key DDL Commands
 The primary DDL commands are:
 1. **CREATE**: Creates new database objects (e.g., tables, indexes, views).
@@ -58,7 +64,7 @@ ADD column_name datatype constraints;
 ALTER TABLE employees
 ADD email VARCHAR(100);
 ```
-![alt text](image.png)
+![alt text](./assets/image.png)
 
 This adds an `email` column to the `employees` table.
 
@@ -73,7 +79,7 @@ MODIFY column_name new_datatype constraints;
 ALTER TABLE employees
 MODIFY salary DECIMAL(12, 2);
 ```
-![alt text](image-1.png)
+![alt text](./assets/image-1.png)
 
 This changes the `salary` column to allow up to 12 digits.
 
@@ -88,7 +94,7 @@ DROP COLUMN column_name;
 ALTER TABLE employees
 DROP COLUMN email;
 ```
-![alt text](image-2.png)
+![alt text](./assets/image-2.png)
 
 This removes the `email` column from the `employees` table.
 
@@ -106,7 +112,7 @@ DROP TABLE table_name;
 ```sql
 DROP TABLE employees;
 ```
-![alt text](image-4.png)
+![alt text](./assets/image-4.png)
 
 This deletes the `employees` table and all its data.
 
@@ -124,7 +130,7 @@ TRUNCATE TABLE table_name;
 ```sql
 TRUNCATE TABLE employees;
 ```
-![alt text](image-5.png)
+![alt text](./assets/image-5.png)
 
 This removes all rows from the `employees` table but keeps the table structure intact.
 

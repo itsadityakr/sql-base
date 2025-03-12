@@ -6,6 +6,12 @@ The `ALTER` command is a **Data Definition Language (DDL)** statement used to mo
 
 ---
 
+## **Example Table**
+
+![alt text](../assets/image-2.png)
+
+---
+
 ## Syntax of `ALTER TABLE`
 The basic syntax for the `ALTER TABLE` command is as follows:
 
@@ -41,7 +47,7 @@ ADD column_name datatype constraints;
 ALTER TABLE employees
 ADD email VARCHAR(100);
 ```
-![alt text](image.png)
+![alt text](./assets/image.png)
 
 This adds a new column named `email` of type `VARCHAR(100)` to the `employees` table.
 
@@ -61,7 +67,7 @@ MODIFY column_name new_datatype constraints;
 ALTER TABLE employees
 MODIFY salary DECIMAL(12, 2);
 ```
-![alt text](image-1.png)
+![alt text](./assets/image-1.png)
 
 This changes the `salary` column to allow up to 12 digits with 2 decimal places.
 
@@ -81,7 +87,7 @@ RENAME COLUMN old_name TO new_name;
 ALTER TABLE employees
 RENAME COLUMN email TO work_email;
 ```
-![alt text](image-2.png)
+![alt text](./assets/image-2.png)
 
 This renames the `email` column to `work_email`.
 
@@ -101,7 +107,7 @@ DROP COLUMN column_name;
 ALTER TABLE employees
 DROP COLUMN work_email;
 ```
-![alt text](image-3.png)
+![alt text](./assets/image-3.png)
 
 This removes the `work_email` column from the `employees` table.
 
@@ -158,8 +164,8 @@ ALTER TABLE employees
 RENAME TO staff;
 ```
 
-![alt text](image-4.png)
-![alt text](image-5.png)
+![alt text](./assets/image-4.png)
+![alt text](./assets/image-5.png)
 
 This renames the `employees` table to `staff`.
 

@@ -10,7 +10,7 @@ Operators in MySQL are symbols or keywords used to perform operations on data. T
 
 ## **Example Table**
 
-![alt text](image-11.png)
+![alt text](./assets/image-11.png)
 
 ---
 
@@ -43,7 +43,7 @@ Arithmetic operators perform mathematical operations on numeric values.
 ```sql
 SELECT 10 + 5 AS sum, 10 * 5 AS product;
 ```
-![alt text](image.png)
+![alt text](./assets/image.png)
 
 ---
 
@@ -67,7 +67,7 @@ SELECT * FROM employees WHERE salary > 50000;
 ```
 This query retrieves all employees with a salary greater than 50,000.
 
-![alt text](image-1.png)
+![alt text](./assets/image-1.png)
 
 ---
 
@@ -87,7 +87,7 @@ SELECT * FROM employees WHERE salary > 50000 AND department = 'Sales';
 ```
 This query retrieves all employees in the Sales department with a salary greater than 50,000.
 
-![alt text](image-2.png)
+![alt text](./assets/image-2.png)
 
 ---
 
@@ -107,7 +107,7 @@ Bitwise operators perform operations on binary representations of integers.
 ```sql
 SELECT 10 & 5 AS bitwise_and, 10 | 5 AS bitwise_or;
 ```
-![alt text](image-3.png)
+![alt text](./assets/image-3.png)
 
 ---
 
@@ -124,7 +124,7 @@ Assignment operators are used to assign values to variables.
 SET @x = 10;
 SELECT @x;
 ```
-![alt text](image-4.png)
+![alt text](./assets/image-4.png)
 
 ---
 
@@ -145,7 +145,7 @@ SELECT * FROM employees WHERE salary BETWEEN 40000 AND 60000;
 ```
 This query retrieves all employees with a salary between 40,000 and 60,000.
 
-![alt text](image-5.png)
+![alt text](./assets/image-5.png)
 
 ---
 
@@ -164,8 +164,8 @@ SELECT 10 + 5 * 2; -- Result: 20 (5 * 2 is evaluated first)
 SELECT (10 + 5) * 2; -- Result: 30 (parentheses change the order)
 ```
 
-![alt text](image-6.png)
-![alt text](image-7.png)
+![alt text](./assets/image-6.png)
+![alt text](./assets/image-7.png)
 
 ---
 
@@ -177,7 +177,7 @@ SELECT employee_id, salary, salary * 1.1 AS new_salary
 FROM employees
 WHERE salary > 50000;
 ```
-![alt text](image-8.png)
+![alt text](./assets/image-8.png)
 
 This query calculates a 10% salary increase for employees earning more than 50,000.
 
@@ -186,7 +186,7 @@ This query calculates a 10% salary increase for employees earning more than 50,0
 SELECT * FROM employees
 WHERE department = 'Sales' AND (salary > 50000 OR hire_date > '2023-01-01');
 ```
-![alt text](image-9.png)
+![alt text](./assets/image-9.png)
 
 This query retrieves employees in the Sales department who either earn more than 50,000 or were hired after January 1, 2023.
 
@@ -195,7 +195,7 @@ This query retrieves employees in the Sales department who either earn more than
 SELECT * FROM employees
 WHERE first_name LIKE 'J%' AND hire_date BETWEEN '2020-01-01' AND '2023-12-31';
 ```
-![alt text](image-10.png)
+![alt text](./assets/image-10.png)
 
 This query retrieves employees whose first name starts with "J" and were hired between 2020 and 2023.
 

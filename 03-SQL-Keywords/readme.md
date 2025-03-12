@@ -9,7 +9,7 @@ SQL (Structured Query Language) is a standard programming language for managing 
 
 ## **Example Table**
 
-![alt text](image-2.png)
+![alt text](./assets/image-2.png)
 
 ---
 
@@ -180,14 +180,14 @@ Updating a record:
 ```sql
 UPDATE employees SET salary = 90000 WHERE first_name = 'John';
 ```
-![alt text](image.png)
+![alt text](./assets/image.png)
 
 Deleting a record:  
 ```sql
 DELETE FROM employees WHERE salary >= 90000;
 ```
 
-![alt text](image-1.png)
+![alt text](./assets/image-1.png)
 
 ---
 

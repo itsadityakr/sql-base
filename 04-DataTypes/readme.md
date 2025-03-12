@@ -8,7 +8,7 @@ SQL data types are the foundation of database design. They define the kind of da
 
 ## **Example Table**
 
-![alt text](image-2.png)
+![alt text](../assets/image-2.png)
 
 ---
 
@@ -213,7 +213,7 @@ SELECT first_name, last_name
 FROM employees
 WHERE hire_date > '2023-01-01';
 ```
-![alt text](image.png)
+![alt text](./assets/image.png)
 
 ---
 

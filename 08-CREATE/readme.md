@@ -6,6 +6,12 @@ The `CREATE TABLE` command is one of the most fundamental **Data Definition Lang
 
 ---
 
+## **Example Table**
+
+![alt text](../assets/image-2.png)
+
+---
+
 ## Syntax of `CREATE TABLE`
 The basic syntax for the `CREATE TABLE` command is as follows:
 

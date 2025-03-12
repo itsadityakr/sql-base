@@ -5,7 +5,11 @@
 SQL (Structured Query Language) is the standard language for interacting with relational databases. The core operations in SQL are often referred to as **CRUD** (Create, Read, Update, Delete). This guide provides a detailed explanation of the `SELECT`, `CREATE`, `INSERT`, `UPDATE`, and `DELETE` statements, along with examples.
 
 ---
+## **Example Table**
 
+![alt text](../assets/image-2.png)
+
+---
 ## SELECT Statement
 The `SELECT` statement is used to retrieve data from one or more tables. It is the most commonly used SQL statement.
 
@@ -24,7 +28,7 @@ LIMIT number;
 ```sql
 SELECT * FROM employees;
 ```
-![alt text](image.png)
+![alt text](./assets/image.png)
 
 This query retrieves all columns from the `employees` table.
 
@@ -33,7 +37,7 @@ This query retrieves all columns from the `employees` table.
 ```sql
 SELECT first_name, last_name FROM employees;
 ```
-![alt text](image-1.png)
+![alt text](./assets/image-1.png)
 
 This query retrieves only the `first_name` and `last_name` columns.
 
@@ -41,7 +45,7 @@ This query retrieves only the `first_name` and `last_name` columns.
 ```sql
 SELECT * FROM employees WHERE department = 'Sales';
 ```
-![alt text](image-2.png)
+![alt text](./assets/image-2.png)
 
 This query retrieves all employees in the Sales department.
 
@@ -49,7 +53,7 @@ This query retrieves all employees in the Sales department.
 ```sql
 SELECT * FROM employees ORDER BY salary DESC;
 ```
-![alt text](image-3.png)
+![alt text](./assets/image-3.png)
 
 This query retrieves all employees sorted by salary in descending order.
 
@@ -57,7 +61,7 @@ This query retrieves all employees sorted by salary in descending order.
 ```sql
 SELECT * FROM employees LIMIT 3;
 ```
-![alt text](image-4.png)
+![alt text](./assets/image-4.png)
 
 This query retrieves the first 10 rows from the `employees` table.
 
@@ -67,7 +71,7 @@ SELECT department, COUNT(*) AS employee_count
 FROM employees
 GROUP BY department;
 ```
-![alt text](image-5.png)
+![alt text](./assets/image-5.png)
 
 This query retrieves the number of employees in each department.
 
@@ -150,7 +154,7 @@ SELECT first_name, last_name, department
 FROM employees
 WHERE hire_date > '2023-01-01';
 ```
-![alt text](image-6.png)
+![alt text](./assets/image-6.png)
 
 This query inserts data into `new_employees` from the `employees` table for employees hired after January 1, 2023.
 
@@ -174,7 +178,7 @@ UPDATE employees
 SET salary = 55000
 WHERE employee_id = 3;
 ```
-![alt text](image-7.png)
+![alt text](./assets/image-7.png)
 
 This query updates the salary of the employee with `employee_id = 101`.
 
@@ -184,7 +188,7 @@ UPDATE employees
 SET salary = salary * 1.1
 WHERE department = 'Sales';
 ```
-![alt text](image-8.png)
+![alt text](./assets/image-8.png)
 
 This query gives a 10% salary raise to all employees in the Sales department.
 
@@ -206,7 +210,7 @@ WHERE condition;
 DELETE FROM employees
 WHERE employee_id = 2;
 ```
-![alt text](image-9.png)
+![alt text](./assets/image-9.png)
 
 This query deletes the employee with `employee_id = 2`.
 
@@ -215,7 +219,7 @@ This query deletes the employee with `employee_id = 2`.
 DELETE FROM employees
 WHERE department = 'IT';
 ```
-![alt text](image-10.png)
+![alt text](./assets/image-10.png)
 
 This query deletes all employees in the IT department.
 
@@ -223,7 +227,7 @@ This query deletes all employees in the IT department.
 ```sql
 DELETE FROM employees;
 ```
-![alt text](image-11.png)
+![alt text](./assets/image-11.png)
 
 This query deletes all rows from the `employees` table (use with caution!).
 
