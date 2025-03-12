@@ -23,6 +23,10 @@ Queries allow you to retrieve data from a database. The `SELECT` statement is th
 ```sql
 SELECT * FROM employees;
 ```
+
+<img src="../assets/table (1).png" alt="table">
+
+
 This retrieves all records from the `employees` table.
 
 ### 2. Data Definition Language (DDL)
@@ -35,13 +39,17 @@ DDL is used to define and modify the structure of a database. It includes comman
 #### Example:
 ```sql
 CREATE TABLE employees (
-    id INT PRIMARY KEY,
-    name VARCHAR(50),
-    age INT,
-    department VARCHAR(50)
+    employee_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    department VARCHAR(50),
+    salary DECIMAL(10, 2),
+    hire_date DATE,
+    manager_id INT,
+    department_id INT
 );
 ```
-This creates a table named `employees` with four columns.
+This creates a table named `employees` with eight columns.
 
 ### 3. Data Manipulation Language (DML)
 DML is used to manage data stored in a database. It includes:
@@ -52,8 +60,12 @@ DML is used to manage data stored in a database. It includes:
 
 #### Example:
 ```sql
-INSERT INTO employees (id, name, age, department)
-VALUES (1, 'Alice', 30, 'HR');
+INSERT INTO employees (first_name, last_name, department, salary, hire_date, manager_id, department_id)
+VALUES ('John', 'Doe', 'Sales', 50000, '2022-01-15', NULL, 1),
+       ('Jane', 'Smith', 'HR', 60000, '2021-05-20', NULL, 2),
+       ('Alice', 'Johnson', 'IT', 70000, '2023-03-10', NULL, 3),
+       ('Bob', 'Brown', 'Sales', 55000, '2022-11-01', 1, 1),
+       ('Charlie', 'Davis', 'Marketing', 65000, '2023-07-22', NULL, 4);
 ```
 This inserts a new employee record.
 
@@ -86,11 +98,7 @@ SQL is an essential tool for database management. It helps users store, retrieve
 A **relational database** is a type of database that organizes data into structured tables consisting of rows and columns. Each table represents an entity (such as customers, employees, or products), and relationships between tables are defined using keys (primary keys and foreign keys). 
 
 ### Example of a Table (Employees):
-| ID  | Name   | Age | Department |
-|-----|--------|-----|------------|
-| 1   | Alice  | 30  | HR         |
-| 2   | Bob    | 25  | IT         |
-| 3   | Charlie| 35  | Sales      |
+<img src="../assets/table (1).png" alt="table">
 
 Each row represents a record, and each column represents an attribute of that record.
 

@@ -6,6 +6,12 @@ SQL data types are the foundation of database design. They define the kind of da
 
 ---
 
+## **Example Table**
+
+![alt text](image-2.png)
+
+---
+
 ## What Are SQL Data Types?
 SQL data types specify the type of data that a column can store. Each column in a table must have a defined data type, which determines:
 - **The kind of data**: Numbers, text, dates, binary data, etc.
@@ -180,28 +186,34 @@ When selecting a data type, consider the following factors:
 ### Example 1: Creating a Table with Different Data Types
 ```sql
 CREATE TABLE employees (
-    employee_id INT PRIMARY KEY,
+    employee_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
-    hire_date DATE,
+    department VARCHAR(50),
     salary DECIMAL(10, 2),
-    is_active BOOLEAN,
-    profile_picture BLOB
+    hire_date DATE,
+    manager_id INT,
+    department_id INT
 );
 ```
 
 ### Example 2: Inserting Data
 ```sql
-INSERT INTO employees (employee_id, first_name, last_name, hire_date, salary, is_active, profile_picture)
-VALUES (1, 'John', 'Doe', '2023-10-25', 50000.00, TRUE, NULL);
+INSERT INTO employees (first_name, last_name, department, salary, hire_date, manager_id, department_id)
+VALUES ('John', 'Doe', 'Sales', 50000, '2022-01-15', NULL, 1),
+       ('Jane', 'Smith', 'HR', 60000, '2021-05-20', NULL, 2),
+       ('Alice', 'Johnson', 'IT', 70000, '2023-03-10', NULL, 3),
+       ('Bob', 'Brown', 'Sales', 55000, '2022-11-01', 1, 1),
+       ('Charlie', 'Davis', 'Marketing', 65000, '2023-07-22', NULL, 4);
 ```
 
 ### Example 3: Querying Data
 ```sql
 SELECT first_name, last_name
 FROM employees
-WHERE hire_date > '2023-01-01' AND is_active = TRUE;
+WHERE hire_date > '2023-01-01';
 ```
+![alt text](image.png)
 
 ---
 

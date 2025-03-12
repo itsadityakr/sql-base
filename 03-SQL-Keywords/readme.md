@@ -7,6 +7,12 @@ SQL (Structured Query Language) is a standard programming language for managing 
 
 ---
 
+## **Example Table**
+
+![alt text](image-2.png)
+
+---
+
 ## **What is SQL Syntax?**  
 SQL syntax refers to the set of rules defining the correct way to write SQL statements. These rules include using proper keywords, table names, column names, conditions, and operators in the correct sequence.  
 
@@ -27,6 +33,7 @@ To retrieve all employee records:
 ```sql
 SELECT * FROM employees;
 ```
+<img src="../assets/table (1).png" alt="table">
 
 ---
 
@@ -49,14 +56,15 @@ Some commonly used SQL keywords include:
 ### **Syntax:**  
 Using SQL keywords in a query:  
 ```sql
-SELECT name, salary FROM employees WHERE salary > 60000 ORDER BY salary DESC;
+SELECT first_name, salary FROM employees WHERE salary > 60000 ORDER BY salary DESC;
 ```
 
 ### **Statement related to the `employees` table:**  
 To list employees earning more than 60,000 in descending order:  
 ```sql
-SELECT name, salary FROM employees WHERE salary > 60000 ORDER BY salary DESC;
+SELECT first_name, salary FROM employees WHERE salary > 60000 ORDER BY salary DESC;
 ```
+<img src="../assets/table (6).png" alt="table">
 
 ---
 
@@ -77,9 +85,13 @@ Defining a table with different data types:
 ```sql
 CREATE TABLE employees (
     employee_id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(50) NOT NULL,
-    age INT NOT NULL,
-    salary DECIMAL(10,2) NOT NULL
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    department VARCHAR(50),
+    salary DECIMAL(10, 2),
+    hire_date DATE,
+    manager_id INT,
+    department_id INT
 );
 ```
 
@@ -88,6 +100,8 @@ To check the structure of the table:
 ```sql
 DESCRIBE employees;
 ```
+
+<img src="../assets//Screenshot 2025-03-12 172352.png" alt="table">
 
 ---
 
@@ -106,14 +120,17 @@ Types of operators in SQL:
 ### **Syntax:**  
 Using operators in SQL:  
 ```sql
-SELECT name, salary FROM employees WHERE salary > 60000 AND age < 35;
+SELECT first_name, salary FROM employees WHERE salary > 60000;
 ```
+
+<img src="../assets/table (6).png" alt="table">
 
 ### **Statement related to the `employees` table:**  
 To find employees whose name starts with 'J':  
 ```sql
-SELECT * FROM employees WHERE name LIKE 'J%';
+SELECT * FROM employees WHERE first_name LIKE 'J%';
 ```
+<img src="../assets/Screenshot 2025-03-12 172645.png" alt="table">
 
 ---
 
@@ -129,18 +146,21 @@ SELECT * FROM employees WHERE name LIKE 'J%';
 
 ### **Syntax:**  
 Selecting data:  
+
 ```sql
-SELECT * FROM employees WHERE age > 30;
-```
-Inserting data:  
-```sql
-INSERT INTO employees (name, age, designation, salary) VALUES ('Chris Evans', 29, 'Manager', 75000.00);
+SELECT first_name, salary FROM employees WHERE salary > 60000;
 ```
 
-### **Statement related to the `employees` table:**  
-Adding a new employee:  
+<img src="../assets/table (6).png" alt="table">
+
+Inserting data:  
 ```sql
-INSERT INTO employees (name, age, designation, salary) VALUES ('Anna Lee', 26, 'Data Scientist', 70000.00);
+INSERT INTO employees (first_name, last_name, department, salary, hire_date, manager_id, department_id)
+VALUES ('John', 'Doe', 'Sales', 50000, '2022-01-15', NULL, 1),
+       ('Jane', 'Smith', 'HR', 60000, '2021-05-20', NULL, 2),
+       ('Alice', 'Johnson', 'IT', 70000, '2023-03-10', NULL, 3),
+       ('Bob', 'Brown', 'Sales', 55000, '2022-11-01', 1, 1),
+       ('Charlie', 'Davis', 'Marketing', 65000, '2023-07-22', NULL, 4);
 ```
 
 ---
@@ -158,22 +178,16 @@ INSERT INTO employees (name, age, designation, salary) VALUES ('Anna Lee', 26, '
 ### **Syntax:**  
 Updating a record:  
 ```sql
-UPDATE employees SET salary = 90000 WHERE name = 'John Doe';
+UPDATE employees SET salary = 90000 WHERE first_name = 'John';
 ```
+![alt text](image.png)
+
 Deleting a record:  
 ```sql
-DELETE FROM employees WHERE age < 25;
+DELETE FROM employees WHERE salary >= 90000;
 ```
 
-### **Statement related to the `employees` table:**  
-Updating an employee's designation:  
-```sql
-UPDATE employees SET designation = 'Senior Developer' WHERE name = 'Michael Johnson';
-```
-Deleting employees earning below 50,000:  
-```sql
-DELETE FROM employees WHERE salary < 50000;
-```
+![alt text](image-1.png)
 
 ---
 
@@ -192,20 +206,6 @@ SQL statements are categorized into:
    - `GRANT`, `REVOKE`  
 4. **TCL (Transaction Control Language):**  
    - `COMMIT`, `ROLLBACK`  
-
-### **Syntax:**  
-Example of a `COMMIT` transaction:  
-```sql
-BEGIN TRANSACTION;
-UPDATE employees SET salary = 95000 WHERE name = 'Emily Davis';
-COMMIT;
-```
-
-### **Statement related to the `employees` table:**  
-To create an index for faster search:  
-```sql
-CREATE INDEX idx_salary ON employees(salary);
-```
 
 ---
 

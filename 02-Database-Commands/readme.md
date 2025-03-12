@@ -18,18 +18,7 @@ SHOW DATABASES;
 ```sql
 SHOW DATABASES;
 ```
-Output:
-```
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| performance_schema |
-| sys                |
-| my_database        |
-+--------------------+
-```
+<img src="../assets/database (1).png" alt="table">
 
 ---
 
@@ -43,9 +32,11 @@ CREATE DATABASE database_name;
 
 ### Example
 ```sql
-CREATE DATABASE my_new_database;
+CREATE DATABASE company;
 ```
-This creates a new database named `my_new_database`.
+<img src="../assets/database (2).png" alt="table">
+
+This creates a new database named `company`.
 
 ---
 
@@ -59,9 +50,9 @@ USE database_name;
 
 ### Example
 ```sql
-USE my_database;
+USE company;
 ```
-This selects the `my_database` database. All subsequent queries will operate on this database.
+This selects the `company` database. All subsequent queries will operate on this database.
 
 ---
 
@@ -75,9 +66,11 @@ DROP DATABASE database_name;
 
 ### Example
 ```sql
-DROP DATABASE my_old_database;
+DROP DATABASE company;
 ```
-This deletes the `my_old_database` database.
+This deletes the `company` database.
+
+<img src="../assets/database (1).png" alt="table">
 
 ---
 
@@ -93,15 +86,9 @@ SELECT DATABASE();
 ```sql
 SELECT DATABASE();
 ```
-Output:
-```
-+------------+
-| DATABASE() |
-+------------+
-| my_database|
-+------------+
-```
-This shows that `my_database` is the currently selected database.
+<img src="../assets/database (3).png" alt="table">
+
+This shows that `company` is the currently selected database.
 
 ---
 
@@ -109,9 +96,9 @@ This shows that `my_database` is the currently selected database.
 | Command                  | Description                                      | Example                              |
 |--------------------------|--------------------------------------------------|--------------------------------------|
 | `SHOW DATABASES;`        | Lists all databases on the server.               | `SHOW DATABASES;`                   |
-| `CREATE DATABASE db_name;`| Creates a new database.                         | `CREATE DATABASE my_new_database;`  |
-| `USE db_name;`           | Selects a database for use.                      | `USE my_database;`                  |
-| `DROP DATABASE db_name;` | Deletes a database and all its contents.         | `DROP DATABASE my_old_database;`    |
+| `CREATE DATABASE db_name;`| Creates a new database.                         | `CREATE DATABASE company;`  |
+| `USE db_name;`           | Selects a database for use.                      | `USE company;`                  |
+| `DROP DATABASE db_name;` | Deletes a database and all its contents.         | `DROP DATABASE company;`    |
 | `SELECT DATABASE();`     | Shows the currently selected database.           | `SELECT DATABASE();`                |
 
 ---

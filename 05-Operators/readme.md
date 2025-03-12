@@ -1,9 +1,16 @@
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 
-# Operators in MySQL: A Comprehensive Guide
+# Operators in MySQL
 
 Operators in MySQL are symbols or keywords used to perform operations on data. They are essential for constructing queries, filtering results, and manipulating data. This guide provides an in-depth look at the different types of operators in MySQL, their syntax, and usage examples.
+
+---
+
+
+## **Example Table**
+
+![alt text](image-11.png)
 
 ---
 
@@ -36,14 +43,7 @@ Arithmetic operators perform mathematical operations on numeric values.
 ```sql
 SELECT 10 + 5 AS sum, 10 * 5 AS product;
 ```
-Output:
-```
-+-----+---------+
-| sum | product |
-+-----+---------+
-|  15 |      50 |
-+-----+---------+
-```
+![alt text](image.png)
 
 ---
 
@@ -67,6 +67,8 @@ SELECT * FROM employees WHERE salary > 50000;
 ```
 This query retrieves all employees with a salary greater than 50,000.
 
+![alt text](image-1.png)
+
 ---
 
 ### 3. Logical Operators
@@ -84,6 +86,8 @@ Logical operators combine multiple conditions.
 SELECT * FROM employees WHERE salary > 50000 AND department = 'Sales';
 ```
 This query retrieves all employees in the Sales department with a salary greater than 50,000.
+
+![alt text](image-2.png)
 
 ---
 
@@ -103,14 +107,7 @@ Bitwise operators perform operations on binary representations of integers.
 ```sql
 SELECT 10 & 5 AS bitwise_and, 10 | 5 AS bitwise_or;
 ```
-Output:
-```
-+-------------+------------+
-| bitwise_and | bitwise_or |
-+-------------+------------+
-|           0 |         15 |
-+-------------+------------+
-```
+![alt text](image-3.png)
 
 ---
 
@@ -127,14 +124,7 @@ Assignment operators are used to assign values to variables.
 SET @x = 10;
 SELECT @x;
 ```
-Output:
-```
-+------+
-| @x   |
-+------+
-|   10 |
-+------+
-```
+![alt text](image-4.png)
 
 ---
 
@@ -155,6 +145,8 @@ SELECT * FROM employees WHERE salary BETWEEN 40000 AND 60000;
 ```
 This query retrieves all employees with a salary between 40,000 and 60,000.
 
+![alt text](image-5.png)
+
 ---
 
 ## Operator Precedence
@@ -172,6 +164,9 @@ SELECT 10 + 5 * 2; -- Result: 20 (5 * 2 is evaluated first)
 SELECT (10 + 5) * 2; -- Result: 30 (parentheses change the order)
 ```
 
+![alt text](image-6.png)
+![alt text](image-7.png)
+
 ---
 
 ## Examples of Operator Usage
@@ -182,6 +177,8 @@ SELECT employee_id, salary, salary * 1.1 AS new_salary
 FROM employees
 WHERE salary > 50000;
 ```
+![alt text](image-8.png)
+
 This query calculates a 10% salary increase for employees earning more than 50,000.
 
 ### Example 2: Logical Operators
@@ -189,6 +186,8 @@ This query calculates a 10% salary increase for employees earning more than 50,0
 SELECT * FROM employees
 WHERE department = 'Sales' AND (salary > 50000 OR hire_date > '2023-01-01');
 ```
+![alt text](image-9.png)
+
 This query retrieves employees in the Sales department who either earn more than 50,000 or were hired after January 1, 2023.
 
 ### Example 3: Special Operators
@@ -196,6 +195,8 @@ This query retrieves employees in the Sales department who either earn more than
 SELECT * FROM employees
 WHERE first_name LIKE 'J%' AND hire_date BETWEEN '2020-01-01' AND '2023-12-31';
 ```
+![alt text](image-10.png)
+
 This query retrieves employees whose first name starts with "J" and were hired between 2020 and 2023.
 
 ---
