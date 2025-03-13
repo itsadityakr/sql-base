@@ -33,7 +33,7 @@ To retrieve all employee records:
 ```sql
 SELECT * FROM employees;
 ```
-![alt text](image.png)
+![alt text](./assets/image.png)
 
 ---
 
@@ -61,7 +61,7 @@ SELECT first_name, salary FROM employees WHERE salary > 60000 ORDER BY salary DE
   
 Lists employees earning more than 60,000 in descending order:  
 
-![alt text](image-1.png)
+![alt text](./assets/image-1.png)
 
 
 
@@ -100,7 +100,7 @@ To check the structure of the table:
 DESCRIBE employees;
 ```
 
-![alt text](image-2.png)
+![alt text](./assets/image-2.png)
 
 ---
 
@@ -122,14 +122,14 @@ Using operators in SQL:
 SELECT first_name, salary FROM employees WHERE salary > 60000;
 ```
 
-![alt text](image-3.png)
+![alt text](./assets/image-3.png)
 
 ### **Statement related to the `employees` table:**  
 To find employees whose name starts with 'J':  
 ```sql
 SELECT * FROM employees WHERE first_name LIKE 'J%';
 ```
-![alt text](image-4.png)
+![alt text](./assets/image-4.png)
 
 ---
 
@@ -150,7 +150,7 @@ Selecting data:
 SELECT first_name, salary FROM employees WHERE salary > 60000;
 ```
 
-![alt text](image-5.png)
+![alt text](./assets/image-5.png)
 
 Inserting data:  
 ```sql
@@ -179,14 +179,14 @@ Updating a record:
 ```sql
 UPDATE employees SET salary = 90000 WHERE first_name = 'John';
 ```
-![alt text](image-6.png)
+![alt text](./assets/image-6.png)
 
 Deleting a record:  
 ```sql
 DELETE FROM employees WHERE salary >= 90000;
 ```
 
-![alt text](image-7.png)
+![alt text](./assets/image-7.png)
 
 ---
 
