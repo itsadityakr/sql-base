@@ -96,7 +96,7 @@ Bitwise operators perform operations on binary representations of integers.
 | Operator | Description                     | Example               |
 |----------|---------------------------------|-----------------------|
 | `&`      | Bitwise AND                     | `10 & 5` → `0`        |
-| `I`      | Bitwise OR                      | `10 Iup 5` → `15`       |
+| `I`      | Bitwise OR                      | `10 I 5` → `15`       |
 | `^`      | Bitwise XOR                     | `10 ^ 5` → `15`       |
 | `~`      | Bitwise NOT                     | `~10` → `-11`         |
 | `<<`     | Left shift                      | `10 << 1` → `20`      |
