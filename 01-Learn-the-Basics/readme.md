@@ -24,7 +24,7 @@ Queries allow you to retrieve data from a database. The `SELECT` statement is th
 SELECT * FROM employees;
 ```
 
-<img src="../assets/table (1).png" alt="table">
+![alt text](./assets/image.png)
 
 
 This retrieves all records from the `employees` table.
@@ -97,8 +97,7 @@ SQL is an essential tool for database management. It helps users store, retrieve
 ## What is a Relational Database?
 A **relational database** is a type of database that organizes data into structured tables consisting of rows and columns. Each table represents an entity (such as customers, employees, or products), and relationships between tables are defined using keys (primary keys and foreign keys). 
 
-### Example of a Table (Employees):
-<img src="../assets/table (1).png" alt="table">
+![alt text](./assets/image-1.png)
 
 Each row represents a record, and each column represents an attribute of that record.
 
@@ -137,19 +136,6 @@ A **Relational Database Management System (RDBMS)** is software used to manage r
    - Horizontal scaling (distributing data across multiple servers) is difficult compared to NoSQL databases.
 ### 4. **Storage Overhead**
    - Indexing, constraints, and relationships can consume more storage compared to simpler data storage solutions.
-
-## SQL vs NoSQL
-| Feature          | SQL (Relational Database) | NoSQL (Non-Relational Database) |
-|-----------------|-------------------------|--------------------------------|
-| **Structure**   | Table-based (rows & columns) | Document, Key-Value, Graph, Column-family |
-| **Schema**      | Fixed schema (predefined) | Flexible schema (dynamic) |
-| **Scalability** | Vertical Scaling (limited horizontal scaling) | Horizontal Scaling (better for big data) |
-| **Transactions** | ACID-compliant | Eventual consistency (some support ACID) |
-| **Examples**    | MySQL, PostgreSQL, SQL Server, Oracle | MongoDB, Cassandra, Redis, DynamoDB |
-| **Use Case**    | Banking, ERP, e-commerce, structured data applications | Real-time analytics, social networks, IoT, unstructured data |
-
-## Summary
-Relational databases (RDBMS) are powerful for structured data management, ensuring integrity and security. However, for applications requiring high flexibility and scalability, NoSQL databases may be a better choice. Understanding the differences helps in selecting the right database for a given use case.
 
 ---
 

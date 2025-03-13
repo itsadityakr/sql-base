@@ -7,9 +7,9 @@ SQL (Structured Query Language) is a standard programming language for managing 
 
 ---
 
-## **Example Table**
+## **Example Table** ```employees```
 
-![alt text](./assets/image-2.png)
+![alt text](../assets/employees_table.png)
 
 ---
 

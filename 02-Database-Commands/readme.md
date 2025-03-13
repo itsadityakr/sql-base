@@ -14,11 +14,7 @@ To view all databases on a MySQL server, use the `SHOW DATABASES` command.
 SHOW DATABASES;
 ```
 
-### Example
-```sql
-SHOW DATABASES;
-```
-<img src="../assets/database (1).png" alt="table">
+![alt text](./assets/image.png)
 
 ---
 
@@ -34,7 +30,7 @@ CREATE DATABASE database_name;
 ```sql
 CREATE DATABASE company;
 ```
-<img src="../assets/database (2).png" alt="table">
+![alt text](./assets/image-1.png)
 
 This creates a new database named `company`.
 
@@ -70,7 +66,7 @@ DROP DATABASE company;
 ```
 This deletes the `company` database.
 
-<img src="../assets/database (1).png" alt="table">
+![alt text](./assets/image.png)
 
 ---
 
@@ -82,11 +78,7 @@ To check which database is currently selected, use the `SELECT DATABASE()` funct
 SELECT DATABASE();
 ```
 
-### Example
-```sql
-SELECT DATABASE();
-```
-<img src="../assets/database (3).png" alt="table">
+![alt text](./assets/image-2.png)
 
 This shows that `company` is the currently selected database.
 
@@ -100,32 +92,6 @@ This shows that `company` is the currently selected database.
 | `USE db_name;`           | Selects a database for use.                      | `USE company;`                  |
 | `DROP DATABASE db_name;` | Deletes a database and all its contents.         | `DROP DATABASE company;`    |
 | `SELECT DATABASE();`     | Shows the currently selected database.           | `SELECT DATABASE();`                |
-
----
-
-## Examples in Action
-
-### Example 1: Creating and Using a Database
-```sql
-CREATE DATABASE company;
-USE company;
-```
-- Creates a new database named `company`.
-- Selects the `company` database for use.
-
-### Example 2: Listing Databases and Checking the Selected Database
-```sql
-SHOW DATABASES;
-SELECT DATABASE();
-```
-- Lists all databases.
-- Shows the currently selected database.
-
-### Example 3: Deleting a Database
-```sql
-DROP DATABASE old_company;
-```
-- Deletes the `old_company` database.
 
 ---
 
