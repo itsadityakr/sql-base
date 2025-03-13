@@ -1,170 +1,81 @@
-# SQL and MySQL Resources
-
-Welcome to the **SQL and MySQL Resources** repository! This collection is designed to provide you with a comprehensive set of guides, tutorials, and examples to enhance your understanding and proficiency with SQL and MySQL. Whether you're a beginner or an advanced user, you'll find valuable resources here.
-
-## Table of Contents
-
-### 01. [Database Concepts and SQL]
-- **Description**: This section covers the foundational concepts of databases and SQL. Learn about different types of databases, relational models, and the basics of SQL syntax and operations.
-- **Topics Covered**: 
-  - Introduction to databases
-  - SQL basics
-  - Types of databases
-
-### 02. [MySQL Installation and Usage Guide]
-- **Description**: A step-by-step guide to installing MySQL on various operating systems and using it effectively.
-- **Topics Covered**:
-  - Installation procedures for Windows, macOS, and Linux
-  - Basic MySQL configuration
-  - Connecting to MySQL
-
-### 03. [Working with MySQL Databases]
-- **Description**: Instructions and examples for creating, managing, and using databases in MySQL.
-- **Topics Covered**:
-  - Creating databases
-  - Managing database users and permissions
-  - Backup and recovery
-
-### 04. [Working with MySQL Tables]
-- **Description**: Detailed information on creating and managing tables in MySQL, including structure and constraints.
-- **Topics Covered**:
-  - Creating tables
-  - Altering table structure
-  - Dropping tables
-
-### 05. [Filtering Data with WHERE Clause in MySQL]
-- **Description**: Techniques for using the `WHERE` clause to filter data in MySQL queries.
-- **Topics Covered**:
-  - Basic filtering
-  - Combining multiple conditions
-  - Using operators with `WHERE`
-
-### 06. [Modifying and Deleting Data in MySQL]
-- **Description**: Instructions on how to modify and delete data within MySQL databases.
-- **Topics Covered**:
-  - Updating records
-  - Deleting records
-  - Safe data modification practices
-
-### 07. [MySQL Table Constraints and Features]
-- **Description**: An overview of table constraints and additional features that ensure data integrity and optimize performance.
-- **Topics Covered**:
-  - Primary keys, foreign keys, and unique constraints
-  - Default values and auto-increment
-  - Indexing for performance
-
-### 08. [MySQL String Functions]
-- **Description**: Functions for manipulating and querying string data in MySQL.
-- **Topics Covered**:
-  - Common string functions (e.g., `CONCAT`, `SUBSTRING`, `REPLACE`)
-  - String pattern matching
-  - Case sensitivity in strings
-
-### 09. [MySQL Query Functions and Clauses with Examples]
-- **Description**: Examples of various query functions and clauses used in MySQL.
-- **Topics Covered**:
-  - Aggregate functions (e.g., `SUM`, `AVG`, `COUNT`)
-  - Clauses (e.g., `GROUP BY`, `HAVING`)
-  - Examples with explanations
-
-### 10. [Data Types in SQL]
-- **Description**: An overview of SQL data types and their usage.
-- **Topics Covered**:
-  - Numeric, date/time, and string data types
-  - Choosing the appropriate data type
-  - Data type conversion
-
-### 11. [SQL Date, Time, and Date-Time Functions]
-- **Description**: Functions for handling date, time, and datetime values in SQL.
-- **Topics Covered**:
-  - Date and time functions (e.g., `NOW`, `DATE_FORMAT`)
-  - Date arithmetic
-  - Handling time zones
-
-### 12. [SQL Operators]
-- **Description**: Overview of SQL operators used in queries for comparisons and logical operations.
-- **Topics Covered**:
-  - Comparison operators (e.g., `=`, `>`, `<`)
-  - Logical operators (e.g., `AND`, `OR`, `NOT`)
-  - Set operators (e.g., `UNION`, `INTERSECT`)
-
-### 13. [SQL Concepts CASE, IS NULL, NOT LIKE]
-- **Description**: Advanced SQL concepts including conditional logic and pattern matching.
-- **Topics Covered**:
-  - The `CASE` statement for conditional logic
-  - Handling NULL values with `IS NULL`
-  - Using `NOT LIKE` for pattern matching
-
-### 14. [SQL Constraints]
-- **Description**: Detailed explanation of SQL constraints to enforce data integrity.
-- **Topics Covered**:
-  - Constraints types (e.g., `NOT NULL`, `CHECK`)
-  - Applying constraints during table creation
-  - Modifying and removing constraints
-
-### 15. [SQL Altering Tables]
-- **Description**: How to modify table structures using SQL commands.
-- **Topics Covered**:
-  - Adding and dropping columns
-  - Modifying column definitions
-  - Renaming tables and columns
-
-### 16. [SQL Relationships]
-- **Description**: Understanding and defining relationships between tables in SQL databases.
-- **Topics Covered**:
-  - One-to-one, one-to-many, and many-to-many relationships
-  - Defining relationships with foreign keys
-  - Ensuring referential integrity
-
-### 17. [SQL Foreign Keys and References]
-- **Description**: Detailed guide on using foreign keys and references to maintain data consistency.
-- **Topics Covered**:
-  - Defining foreign keys
-  - Managing cascade updates and deletes
-  - Referential integrity constraints
-
-### 18. [SQL Joins]
-- **Description**: Techniques for combining rows from multiple tables using SQL joins.
-- **Topics Covered**:
-  - Types of joins (e.g., `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL JOIN`)
-  - Using joins to retrieve related data
-  - Performance considerations with joins
-
-### 19. [MySQL Views, HAVING, and ROLLUP]
-- **Description**: Working with views, `HAVING` clause, and `ROLLUP` operator in MySQL for advanced querying.
-- **Topics Covered**:
-  - Creating and managing views
-  - Filtering grouped data with `HAVING`
-  - Using `ROLLUP` for aggregate data
-
-### 20. [MySQL Stored Routines]
-- **Description**: Creating and using stored procedures and functions in MySQL.
-- **Topics Covered**:
-  - Writing stored procedures and functions
-  - Using parameters and variables
-  - Managing and debugging stored routines
-
-### 21. [MySQL Interview Questions]
-- **Description**: A collection of common interview questions and answers related to MySQL.
-- **Topics Covered**:
-  - Frequently asked questions
-  - Sample answers and explanations
-  - Tips for preparing for MySQL interviews
-
-### 22. [MySQL Window Functions]
-- **Description**: Utilizing window functions in MySQL for advanced analytics and reporting.
-- **Topics Covered**:
-  - Introduction to window functions
-  - Common window functions (e.g., `ROW_NUMBER`, `RANK`, `LEAD`)
-  - Use cases and examples
-
-## License
-
-This repository is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute the resources as long as you include the original copyright and license notice.
-
-## Contact
-
-For questions, feedback, or inquiries, please open an issue on the repository or contact [Aditya Kumar](mailto:itsadityakr27.services.com).
+<img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Badge" style="width: 100%;">
 
 ---
-- by Aditya Kumar
+
+# **SQL Base - Learn ```MySQL```**  
+
+Welcome to **SQL Base**, an organized and beginner-friendly course covering **MySQL** from the ground up. This repository is structured to take you from basic SQL concepts to advanced database operations, making it easy to follow along and practice.  
+
+📌 **GitHub Repository**: [SQL Base](https://github.com/itsadityakr/sql-base/tree/main/00-commands)  
+
+---
+
+## **📖 Table of Contents**  
+
+### **1️⃣ Introduction to SQL**  
+- 📌 [01 - Learn the Basics](https://github.com/itsadityakr/sql-base/tree/main/01-Learn-the-Basics)  
+
+### **2️⃣ Database Commands**  
+- 📌 [02 - Database Commands](https://github.com/itsadityakr/sql-base/tree/main/02-Database-Commands)  
+
+### **3️⃣ SQL Fundamentals**  
+- 📌 [03 - SQL Keywords](https://github.com/itsadityakr/sql-base/tree/main/03-SQL-Keywords)  
+- 📌 [04 - Data Types](https://github.com/itsadityakr/sql-base/tree/main/04-DataTypes)  
+- 📌 [05 - Operators](https://github.com/itsadityakr/sql-base/tree/main/05-Operators)  
+- 📌 [06 - Statements](https://github.com/itsadityakr/sql-base/tree/main/06-Statements)  
+
+### **4️⃣ Data Definition Language (DDL)**  
+DDL is used to define, alter, and delete database objects.  
+- 📌 [07 - Data Definition Language (DDL)](https://github.com/itsadityakr/sql-base/tree/main/07-Data-Definition-Language-DDL)  
+- 📌 [08 - CREATE (Creating Tables, Databases, and Indexes)](https://github.com/itsadityakr/sql-base/tree/main/08-CREATE)  
+- 📌 [09 - ALTER (Modifying Tables)](https://github.com/itsadityakr/sql-base/tree/main/09-ALTER)  
+- 📌 [10 - DROP (Deleting Database Objects)](https://github.com/itsadityakr/sql-base/tree/main/10-DROP)  
+- 📌 [11 - TRUNCATE (Removing All Records from a Table)](https://github.com/itsadityakr/sql-base/tree/main/11-TRUNCATE)  
+
+### **5️⃣ Data Manipulation Language (DML)**  
+DML commands allow users to insert, update, delete, and retrieve data.  
+- 📌 [12 - Data Manipulation Language (DML)](https://github.com/itsadityakr/sql-base/tree/main/12-Data-Manipulation-Language-DML)  
+- 📌 [13 - SELECT (Retrieving Data)](https://github.com/itsadityakr/sql-base/tree/main/13-SELECT)  
+- 📌 [14 - SELECT FROM (Choosing Tables)](https://github.com/itsadityakr/sql-base/tree/main/14-SELECT-FROM)  
+- 📌 [15 - SELECT WHERE (Filtering Data)](https://github.com/itsadityakr/sql-base/tree/main/15-SELECT-WHERE)  
+- 📌 [16 - SELECT JOINS (Combining Tables)](https://github.com/itsadityakr/sql-base/tree/main/16-SELECT-JOINS)  
+- 📌 [17 - SELECT GROUP BY (Aggregating Data)](https://github.com/itsadityakr/sql-base/tree/main/17-SELECT-GROUPBY)  
+- 📌 [18 - SELECT ORDER BY (Sorting Data)](https://github.com/itsadityakr/sql-base/tree/main/18-SELECT-ORDERBY)  
+- 📌 [19 - SELECT HAVING (Filtering Aggregated Data)](https://github.com/itsadityakr/sql-base/tree/main/19-SELECT-HAVING)  
+- 📌 [20 - INSERT (Adding New Records)](https://github.com/itsadityakr/sql-base/tree/main/20-SELECT-INSERT)  
+- 📌 [21 - UPDATE (Modifying Existing Records)](https://github.com/itsadityakr/sql-base/tree/main/21-SELECT-UPDATE)  
+- 📌 [22 - DELETE (Removing Records)](https://github.com/itsadityakr/sql-base/tree/main/22-SELECT-DELETE)  
+
+---
+
+## **🚀 How to Use This Repository**  
+### **Step 1: Clone the Repository**  
+Use the following command to clone this repository to your local machine:  
+```sh
+git clone https://github.com/itsadityakr/sql-base.git
+```
+### **Step 2: Navigate the Course**  
+Each folder contains **detailed explanations**, **code snippets**, and **real-world examples**. Follow them in sequence to build your SQL knowledge step by step.  
+
+### **Step 3: Practice SQL Commands**  
+Execute the provided SQL queries in **MySQL Workbench**, **phpMyAdmin**, or **Command Line MySQL**.  
+
+---
+
+## **🏆 Why Learn SQL?**  
+✅ **High Demand**: SQL is an essential skill for **data analysts, developers, and database administrators**.  
+✅ **Industry Standard**: Used by **Google, Facebook, Amazon, Microsoft, and countless others**.  
+✅ **Powerful & Scalable**: Manage both **small databases** and **enterprise-level systems** efficiently.  
+
+---
+
+## **📢 Contributing**  
+Want to improve this course? Follow these steps:  
+1. **Fork the repository**  
+2. **Make your changes**  
+3. **Submit a pull request**  
+
+Every contribution helps make SQL learning easier for everyone!  
+
+---
+![Static Badge](https://img.shields.io/badge/Aditya%20Kumar-black?style=for-the-badge&logo=atlasos&logoColor=%23ffffff)
