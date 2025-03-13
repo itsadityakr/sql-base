@@ -64,7 +64,7 @@ SELECT * FROM employees LIMIT 3;
 ```
 ![alt text](./assets/image-4.png)
 
-This query retrieves the first 10 rows from the `employees` table.
+This query retrieves the first 3 rows from the `employees` table.
 
 #### 6. Aggregating Data with `GROUP BY`
 ```sql
