@@ -6,9 +6,9 @@
 
 ---
 
-## **Example Table**
+## **Example Table** ```employees```
 
-![alt text](../assets/image-2.png)
+![alt text](../assets/employees_table.png)
 
 ---
 

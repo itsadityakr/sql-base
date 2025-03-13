@@ -5,9 +5,10 @@
 SQL (Structured Query Language) is the standard language for interacting with relational databases. The core operations in SQL are often referred to as **CRUD** (Create, Read, Update, Delete). This guide provides a detailed explanation of the `SELECT`, `CREATE`, `INSERT`, `UPDATE`, and `DELETE` statements, along with examples.
 
 ---
-## **Example Table**
 
-![alt text](../assets/image-2.png)
+## **Example Table** ```employees```
+
+![alt text](../assets/employees_table.png)
 
 ---
 ## SELECT Statement

@@ -33,7 +33,7 @@ To retrieve all employee records:
 ```sql
 SELECT * FROM employees;
 ```
-<img src="../assets/table (1).png" alt="table">
+![alt text](image.png)
 
 ---
 
@@ -58,13 +58,12 @@ Using SQL keywords in a query:
 ```sql
 SELECT first_name, salary FROM employees WHERE salary > 60000 ORDER BY salary DESC;
 ```
+  
+Lists employees earning more than 60,000 in descending order:  
 
-### **Statement related to the `employees` table:**  
-To list employees earning more than 60,000 in descending order:  
-```sql
-SELECT first_name, salary FROM employees WHERE salary > 60000 ORDER BY salary DESC;
-```
-<img src="../assets/table (6).png" alt="table">
+![alt text](image-1.png)
+
+
 
 ---
 
@@ -101,7 +100,7 @@ To check the structure of the table:
 DESCRIBE employees;
 ```
 
-<img src="../assets//Screenshot 2025-03-12 172352.png" alt="table">
+![alt text](image-2.png)
 
 ---
 
@@ -123,14 +122,14 @@ Using operators in SQL:
 SELECT first_name, salary FROM employees WHERE salary > 60000;
 ```
 
-<img src="../assets/table (6).png" alt="table">
+![alt text](image-3.png)
 
 ### **Statement related to the `employees` table:**  
 To find employees whose name starts with 'J':  
 ```sql
 SELECT * FROM employees WHERE first_name LIKE 'J%';
 ```
-<img src="../assets/Screenshot 2025-03-12 172645.png" alt="table">
+![alt text](image-4.png)
 
 ---
 
@@ -151,7 +150,7 @@ Selecting data:
 SELECT first_name, salary FROM employees WHERE salary > 60000;
 ```
 
-<img src="../assets/table (6).png" alt="table">
+![alt text](image-5.png)
 
 Inserting data:  
 ```sql
@@ -180,14 +179,14 @@ Updating a record:
 ```sql
 UPDATE employees SET salary = 90000 WHERE first_name = 'John';
 ```
-![alt text](./assets/image.png)
+![alt text](image-6.png)
 
 Deleting a record:  
 ```sql
 DELETE FROM employees WHERE salary >= 90000;
 ```
 
-![alt text](./assets/image-1.png)
+![alt text](image-7.png)
 
 ---
 

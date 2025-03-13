@@ -7,10 +7,9 @@ Operators in MySQL are symbols or keywords used to perform operations on data. T
 
 ---
 
+## **Example Table** ```employees```
 
-## **Example Table**
-
-![alt text](./assets/image-11.png)
+![alt text](../assets/employees_table.png)
 
 ---
 
