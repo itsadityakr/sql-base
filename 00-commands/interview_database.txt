@@ -1,0 +1,51 @@
+CREATE DATABASE company;
+USE company;
+
+-- Create departments table
+CREATE TABLE departments (
+    department_id INT PRIMARY KEY AUTO_INCREMENT,
+    department_name VARCHAR(50) NOT NULL,
+    location VARCHAR(50) NOT NULL
+);
+
+-- Insert sample data into departments table
+INSERT INTO departments (department_name, location) VALUES
+('Sales', 'New York'),
+('Marketing', 'Los Angeles'),
+('IT', 'San Francisco'),
+('HR', 'Chicago');
+
+-- Create employees table
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    department_id INT,
+    salary DECIMAL(10,2) NOT NULL,
+    hire_date DATE NOT NULL,
+    manager_id INT,
+    FOREIGN KEY (manager_id) REFERENCES employees(employee_id),
+    FOREIGN KEY (department_id) REFERENCES departments(department_id)
+);
+
+-- Insert sample data into employees table
+INSERT INTO employees (first_name, last_name, department_id, salary, hire_date, manager_id) VALUES
+('John', 'Doe', 1, 55000.00, '2019-06-12', NULL),
+('Jane', 'Smith', 2, 60000.00, '2018-09-23', NULL),
+('Alice', 'Johnson', 3, 75000.00, '2020-01-15', NULL),
+('Bob', 'Brown', 1, 52000.00, '2021-07-01', 1),
+('Charlie', 'Davis', 4, 65000.00, '2017-03-10', NULL),
+('Emma', 'Wilson', 2, 58000.00, '2019-11-25', 2),
+('David', 'Martinez', 3, 78000.00, '2016-05-30', 3),
+('Olivia', 'Taylor', 4, 62000.00, '2018-08-19', 4),
+('Ethan', 'White', 1, 53000.00, '2022-02-10', 1),
+('Sophia', 'Hall', 2, 59000.00, '2020-12-05', 2),
+('Liam', 'Anderson', 3, 77000.00, '2015-04-22', 3),
+('Mia', 'Thomas', 4, 64000.00, '2019-07-14', 4),
+('Noah', 'Harris', 1, 51000.00, '2023-06-08', 1),
+('Isabella', 'King', 2, 57000.00, '2021-01-30', 2),
+('William', 'Scott', 3, 80000.00, '2014-10-09', 3);
+
+SELECT * FROM employees;
+-- SELECT * FROM departments;
+-- DROP database company;

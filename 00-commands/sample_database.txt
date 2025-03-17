@@ -1,6 +1,5 @@
 CREATE DATABASE company;
 USE company;
--- DROP database company;
 
 CREATE TABLE employees (
     employee_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -72,9 +71,10 @@ VALUES ('Laptop', 1000.00, 'Electronics'),
        ('Smartphone', 500.00, 'Electronics'),
        ('Tablet', 300.00, 'Electronics'),
        ('Headphones', 150.00, 'Accessories');
-       
+
 SELECT * FROM employees;
-SELECT * FROM departments;
-SELECT * FROM customers;
-SELECT * FROM orders;
-SELECT * FROM products;
+-- SELECT * FROM departments;
+-- SELECT * FROM customers;
+-- SELECT * FROM orders;
+-- SELECT * FROM products;
+-- DROP database company;
